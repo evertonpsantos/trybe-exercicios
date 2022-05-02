@@ -1,1 +1,1 @@
-Exercícios iniciais da minha jornad ano curso de Desenvolvimento Web na Trybe. 
+Exercicios da minha jonrnada no curso de Desenvolvimento Web na Trybe.

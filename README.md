@@ -1,1 +1,1 @@
-Oi! Aqui estão os exercícios que fiz no curso de Desenvolvimento Web na Trybe.
+Olá! Aqui estão os exercícios que fiz no curso de Desenvolvimento Web na Trybe.

@@ -2,14 +2,18 @@
     width: 200px;
     position: absolute;
     top: 50px;
-    left: 100px;
+    left: 5px;
     z-index: 1;
+    float: top;
   }
   
   .goomba {
     width: 100px;
     position: absolute;
     z-index: 2;
+    float: bottom;
+    top: 350px;
+    left: 50px;
   }
   
   .baloon {

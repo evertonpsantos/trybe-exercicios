@@ -1,20 +1,17 @@
+/* 1 - Posicione o Mário acima do Goomba. */
 .super-mario {
-    width: 200px;
-    position: absolute;
-    top: 50px;
-    left: 5px;
-    z-index: 1;
-    float: top;
-  }
-  
-  .goomba {
-    width: 100px;
-    position: absolute;
-    z-index: 2;
-    float: bottom;
-    top: 350px;
-    left: 50px;
-  }
+  width: 200px;
+  position: absolute;
+  left: 100px;
+  top: 100px;
+}
+
+.goomba {
+  width: 100px;
+  position: absolute;
+  top: 400px;
+  left: 150px;
+}
   
   .baloon {
     position: absolute;

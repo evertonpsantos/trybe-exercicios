@@ -11,3 +11,7 @@
        font-family: 'Courier New', Courier, monospace;
        background-color: darksalmon;
     }
+
+    ul, ol {
+        list-style: none;
+    }

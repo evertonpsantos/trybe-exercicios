@@ -1,0 +1,11 @@
+ol li {
+    background-color: yellow;
+}
+
+.indice-impar {
+    text-transform: uppercase;
+}
+
+.indice-par {
+    color: green;
+}

@@ -10,6 +10,14 @@ ol li {
     color: green;
 }
 
+li {
+    font-size: 20px;
+}
+
+li em {
+    font-weight: bold;
+}
+
 h1, h3 {
     color: red;
 }

@@ -26,6 +26,32 @@ li em {
     background-color: pink;
 }
 
+ul#aliados li:hover {
+    font-weight: bold;
+}
+
+ul#aliados li a[href="https://pt.stackoverflow.com/"]:hover {
+    color: orange;
+}
+
+ul#aliados li a[href="https://www.w3schools.com/"]:hover {
+    color: green;
+}
+
+ul#aliados li a[href="https://developer.mozilla.org/pt-BR/"]:hover {
+    color: gray;
+}
+
+ul#aliados li a[href="https://devdocs.io/"]:hover {
+    color: yellow;
+}
+
+ul#aliados li a[href="https://app.betrybe.com/"]:hover {
+    color: green;
+}
+
+
+
 h1, h3 {
     color: red;
 }

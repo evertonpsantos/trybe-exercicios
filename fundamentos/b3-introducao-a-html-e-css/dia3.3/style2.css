@@ -1,39 +1,31 @@
-/* 1 - Posicione o Mário acima do Goomba. */
 .super-mario {
   width: 200px;
   position: absolute;
-  left: 100px;
-  top: 100px;
 }
 
 .goomba {
   width: 100px;
   position: absolute;
   top: 400px;
-  left: 150px;
+  left: 50px;
 }
-  
-  .baloon {
-    position: absolute;
-    left: 500px;
-    z-index: 3;
-    width: 200px;
-  }
-  
-  .speach {
-    font-size: 25px;
-    position: absolute;
-    z-index: 4;
-    top: 66px;
-    left: 535px;
-    width: 50px;
-  }
-  
-  .bowser {
-    width: 200px;
-    position: absolute;
-    float: right;
-    left: 700px;
-    z-index: 5;
-    top: 170px;
-  }
+
+.baloon {
+  position: absolute;
+  left: 500px;
+}
+
+.speach {
+  font-size: 25px;
+  position: absolute;
+  left: 520px;
+  top: 130px;
+  z-index: 2;
+}
+
+.bowser {
+  width: 200px;
+  position: absolute;
+  left: 800px;
+  top: 200px;
+}

@@ -18,6 +18,14 @@ li em {
     font-weight: bold;
 }
 
+.colorir-fonte {
+    color:  blue;
+}
+
+.colorir-fonte.java {
+    background-color: pink;
+}
+
 h1, h3 {
     color: red;
 }

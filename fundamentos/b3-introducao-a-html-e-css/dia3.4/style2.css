@@ -1,6 +1,7 @@
 body {
    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
    text-align: center;
+   background-color: lightskyblue;
 
 }
 
@@ -11,6 +12,10 @@ a {
 a:hover {
    background-color: cornflowerblue;
    color: black;
+}
+
+.cabecalho-links {
+   margin-right: 10px;
 }
 
 td, th {

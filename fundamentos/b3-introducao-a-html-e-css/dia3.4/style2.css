@@ -1,0 +1,39 @@
+body {
+   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   text-align: center;
+
+}
+
+a {
+   text-decoration: none;
+}
+
+a:hover {
+   background-color: cornflowerblue;
+   color: black;
+}
+
+td, th {
+   border: 1px solid black;
+   padding: 5px;
+   width: 50px;
+}
+
+th {
+   background-color: lightcoral;
+}
+
+table {
+   border-collapse: collapse;
+   display: block;
+   position: absolute;
+   margin-left: 500px;
+}
+
+.fatos-artigo {
+   margin-top: 20px;
+}
+
+.fatos-tabelados {
+   margin-bottom: 50px;
+}

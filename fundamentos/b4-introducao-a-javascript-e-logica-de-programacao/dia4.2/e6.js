@@ -6,5 +6,9 @@ for (let i = 0; i < numbers.length; i += 1) {
       oddNumbers.push(numbers[i]);
    }
 }
-console.log(oddNumbers);
+console.log(oddNumbers.length);
+
+if (oddNumbers === 0) {
+   console.log ("Nenhum valor ímpar encontrado");
+}
 

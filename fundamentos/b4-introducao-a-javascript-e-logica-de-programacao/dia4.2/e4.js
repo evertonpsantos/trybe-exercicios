@@ -9,8 +9,6 @@ for (let i = 0; i < numbers.length; i += 1) {
 
 if (result > 20) {
   console.log("Valor maior que 20");
-} else if (result < 20) {
-  console.log("Valor menor que 20");
 } else {
-   console.log("Erro");
+  console.log("Valor menor que ou igual a 20");
 }

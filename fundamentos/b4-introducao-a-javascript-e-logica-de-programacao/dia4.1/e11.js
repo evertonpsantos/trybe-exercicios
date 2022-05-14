@@ -45,8 +45,7 @@ if (salarioBruto <= 1556.94) {
     console.log(salarioFinal);
   }
 } else if (salarioBruto > 5189.82) {
-  let aliquotaInss = (salarioBruto * 11) / 100;
-  let salarioBrutoInss = salarioBruto - aliquotaInss;
+  let salarioBrutoInss = salarioBruto - 570.88;
   if (salarioBrutoInss >= 1903.99 && salarioBrutoInss <= 2826.25) {
     let aliquotaImpostoDeRenda = (salarioBrutoInss * 7.5) / 100 - 142.8;
     let salarioFinal = salarioBrutoInss - aliquotaImpostoDeRenda;

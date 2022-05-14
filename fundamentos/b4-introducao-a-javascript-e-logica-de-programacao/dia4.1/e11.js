@@ -1,4 +1,4 @@
-const salarioBruto = 3000;
+const salarioBruto = 2000;
 
 if (salarioBruto <= 1556.94) {
   let aliquotaInss = (salarioBruto * 8) / 100;
@@ -7,6 +7,7 @@ if (salarioBruto <= 1556.94) {
 } else if (salarioBruto >= 1556.95 && salarioBruto <= 2594.92) {
   let aliquotaInss = (salarioBruto * 9) / 100;
   const salarioBrutoInss = salarioBruto - aliquotaInss;
+  console.log(salarioBrutoInss);
   if (salarioBrutoInss >= 1903.99 && salarioBrutoInss <= 2826.25) {
     let aliquotaImpostoDeRenda = (salarioBrutoInss * 7.5) / 100 - 142.8;
     let salarioFinal = salarioBrutoInss - aliquotaImpostoDeRenda;
@@ -27,6 +28,7 @@ if (salarioBruto <= 1556.94) {
 } else if (salarioBruto >= 2594.93 && salarioBruto <= 5189.82) {
   let aliquotaInss = (salarioBruto * 11) / 100;
   let salarioBrutoInss = salarioBruto - aliquotaInss;
+  console.log(salarioBrutoInss);
   if (salarioBrutoInss >= 1903.99 && salarioBrutoInss <= 2826.25) {
     let aliquotaImpostoDeRenda = (salarioBrutoInss * 7.5) / 100 - 142.8;
     let salarioFinal = salarioBrutoInss - aliquotaImpostoDeRenda;

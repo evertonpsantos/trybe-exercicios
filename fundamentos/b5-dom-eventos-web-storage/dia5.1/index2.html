@@ -42,9 +42,20 @@
       </section>
     </main>
     <script>
-       let paragrafo1 = document.querySelector('.center-content p:nth-child(2)');
-       paragrafo1.innerText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque finibus sed ligula porta condimentum. Vivamus dolor risus, accumsan in tincidunt eleifend, malesuada id lacus. Maecenas tincidunt nisl iaculis lorem imperdiet semper.";
-       
+      let paragrafo1 = document.querySelector('.center-content p:nth-child(2)');
+      function changeText () {
+         paragrafo1.innerText = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque finibus sed ligula porta condimentum. Vivamus dolor risus, accumsan in tincidunt eleifend, malesuada id lacus. Maecenas tincidunt nisl iaculis lorem imperdiet semper.';
+      }
+
+      changeText();
+
+      function changeMainSquare () {
+         let mainSquare = document.querySelector('.main-content');
+         mainSquare.style.background = 'rgb(76,164,109)';
+      }
+
+      changeMainSquare();
+
 //  Crie uma função que mude a cor do quadrado amarelo para o verde da Trybe (rgb(76,164,109)).
 //  Crie uma função que mude a cor do quadrado vermelho para branco.
 //  Crie uma função que corrija o texto da tag <h1>.

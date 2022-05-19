@@ -72,7 +72,13 @@
 
       fixTitle();
 
-      //  Crie uma função que corrija o texto da tag <h1>.
+      function paragraphUpperCase () {
+         let uppercase =  document.getElementsByTagName('p')[1];
+         uppercase.innerHTML = uppercase.innerHTML.toUpperCase();
+      }
+
+      paragraphUpperCase();
+
       //  Crie uma função que modifique todo o texto da tag <p> para maiúsculo.
       //  Crie uma função que exiba o conteúdo de todas as tags <p> no console.
     </script>

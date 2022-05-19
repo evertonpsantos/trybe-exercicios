@@ -1,3 +1,6 @@
+const custoTotal = 12;
+const valorVenda = 15;
+
 const custoProduto = 10;
 const valorVenda = 20;
 

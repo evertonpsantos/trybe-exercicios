@@ -1,0 +1,62 @@
+ol li {
+    background-color: yellow;
+}
+
+.indice-impar {
+    text-transform: uppercase;
+}
+
+.indice-par {
+    color: green;
+}
+
+li {
+    font-size: 20px;
+}
+
+li em {
+    font-weight: bold;
+}
+
+.colorir-fonte {
+    color:  blue;
+}
+
+.colorir-fonte.java {
+    background-color: pink;
+}
+
+ul#aliados li:hover {
+    font-weight: bold;
+}
+
+ul#aliados li a[href="https://pt.stackoverflow.com/"]:hover {
+    color: orange;
+}
+
+ul#aliados li a[href="https://www.w3schools.com/"]:hover {
+    color: green;
+}
+
+ul#aliados li a[href="https://developer.mozilla.org/pt-BR/"]:hover {
+    color: gray;
+}
+
+ul#aliados li a[href="https://devdocs.io/"]:hover {
+    color: yellow;
+}
+
+ul#aliados li a[href="https://app.betrybe.com/"]:hover {
+    color: green;
+}
+
+
+
+h1, h3 {
+    color: red;
+}
+
+h1 em {
+    font-size: 40px;
+    border: 1px black solid;
+}

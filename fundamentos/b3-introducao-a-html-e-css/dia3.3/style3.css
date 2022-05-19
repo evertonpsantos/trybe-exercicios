@@ -1,0 +1,17 @@
+    h1, p {
+        text-align: center;
+        transition: width 4s;
+    }
+
+    li:hover {
+        background-color: goldenrod;
+    }
+
+    li:active {
+       font-family: 'Courier New', Courier, monospace;
+       background-color: darksalmon;
+    }
+
+    ul, ol {
+        list-style: none;
+    }

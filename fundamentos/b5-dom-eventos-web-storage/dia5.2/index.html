@@ -87,7 +87,18 @@
       imagem.src = 'https://picsum.photos/200';
       imagem.className = 'small-image';
       sectionLeft.appendChild(imagem);
-      
+
+      let list = document.createElement('ul');
+      sectionRight.appendChild(list);
+      let numbersInFull = ['Um', 'Dois', 'Três', 'Quatro', 'Cinco', 'Seis,', 'Sete', 'Oito', 'Nove', 'Dez'];
+      for (let i = 0; i < numbersInFull.length; i += 1) {
+      let numbersCurrent = numbersInFull[i];
+      let numbersList = document.createElement('li');
+      numbersList.innerText = numbersCurrent;
+      list.appendChild(numbersList);
+      }
+
+
     </script>
   </body>
 </html>

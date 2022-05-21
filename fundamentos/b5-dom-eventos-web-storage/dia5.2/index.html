@@ -97,6 +97,7 @@
       let numbersCurrent = numbersInFull[i];
       let numbersList = document.createElement('li');
       numbersList.innerText = numbersCurrent;
+      numbersList.className = 'list-items';
       list.appendChild(numbersList);
       }
 
@@ -114,6 +115,9 @@
 
       main.removeChild(sectionLeft);
       sectionCenter.parentElement.style.background = 'green';
+
+      document.getElementsByClassName('list-items')[9].remove();
+      document.getElementsByClassName('list-items')[8].remove();
 
       
     </script>

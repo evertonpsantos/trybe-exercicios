@@ -53,3 +53,13 @@ function createDays() {
 }
 
 createDays();
+
+function createButtonHoliday (string) {
+  let buttonContainer = document.querySelector('.buttons-container');
+  let newButton = document.createElement('button');
+  newButton.setAttribute('id', 'btn-holiday');
+  newButton.innerHTML = string;
+  buttonContainer.appendChild(newButton);
+}
+
+createButtonHoliday('Feriados');

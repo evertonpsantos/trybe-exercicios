@@ -1,0 +1,9 @@
+body {
+   text-align: center;
+   background-color: moccasin;
+}
+
+footer {
+   position:fixed;
+   bottom: 10px;
+}

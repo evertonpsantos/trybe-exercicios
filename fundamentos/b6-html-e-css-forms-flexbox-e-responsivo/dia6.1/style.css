@@ -1,0 +1,66 @@
+* {
+   padding: 0;
+   margin: 0;
+}
+
+h1 {
+   margin: 15px 0;
+   color: green;
+}
+
+body {
+   text-align: center;
+   background-color: #E2F3D7;
+}
+
+#form-main {
+   background-color: #D7E1C9;
+   padding: 20px;
+   width: 80%;
+   margin: auto;
+   border-radius: 10px;
+}
+
+.input-text {
+   margin-bottom: 10px;   
+}
+
+#field-favorite-destination {
+   padding: 10px;
+   width: fit-content;
+   margin: auto;
+   border: 2px solid darkgreen;
+}
+
+.radio-options {
+   margin: 0 5px;
+}
+
+#why-area-section {
+   width: 100%;
+}
+
+#why-area {
+   width: 50%;
+   resize: none;
+   padding: 5px;
+}
+
+.input-text:focus {
+   background-color: lightgreen;
+}
+
+#best-date {
+   margin-bottom: 10px;
+}
+
+#photo-area {
+   margin-bottom: 10px;
+}
+
+.buttons {
+   margin-top: 15px;
+   margin-left: 5px;
+   border-radius: 10px;
+   padding: 8px;
+}

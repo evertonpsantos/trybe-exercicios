@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>TrybeTrip</title>
+   <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <header>
+      <h1>Concurso TrybeTrip</h1>
+   </header>
+
+   <main id="main-part">
+      <form action="" method="get" id="form-main">
+         <label for="nome-input">Nome: </label>
+         <input class="input-text" type="text" id="nome-input" minlength="10" maxlength="40">
+         <br>
+         <label for="email-input">E-mail: </label>
+         <input class="input-text" type="text" id="email-input"  minlength="10" maxlength="50">
+         <br>
+            <fieldset id="field-favorite-destination">
+               <legend id="legend-favorite-destination">Destino preferido: </legend>
+               <label for="favorite-destination-1">
+                  <input class="radio-options" type="radio" name="favorite-destination" id="favorite-destination-1" value="cidade">Cidade
+               </label>
+               <label for="favorite-destination-2">
+                  <input class="radio-options" type="radio" name="favorite-destination" id="favorite-destination-2" value="campo">Campo
+               </label>
+               <label for="favorite-destination-3">
+                  <input class="radio-options" type="radio" name="favorite-destination" id="favorite-destination-3" value="praia" checked>Praia
+               </label>
+               <label for="favorite-destination-4">
+                  <input class="radio-options" type="radio" name="favorite-destination" id="favorite-destination-4" value="montanha">Montanha
+               </label>
+            </fieldset>
+         <br>
+         <div id="why-area-section">
+            <label for="why-area">Por que você deveria ser a pessoa desenvolvedora a ganhar o concurso TrybeTrip</label>
+            <br>
+            <textarea class="input-text" name="why-area" id="why-area" cols="30" rows="10" maxlength="500"></textarea>
+         </div>
+         <br>
+         <label for="photo-area">Mande sua foto <br>
+            <input type="file" name="photo-area" id="photo-area">
+         </label>
+         <br>
+         <label for="best-date">Qual a melhor data para realizar sua viagem? <input type="date" name="best-date" id="best-date"></label>
+         <br>
+         <label for="newletter-option">Gostaria de receber outras incríveis oportunidades oferecidas pela Trybe?
+         </label>
+         <input type="checkbox" name="newletter-option" id="newletter-option">
+         <br>
+         <label for="agreement-input">Concordo que imagens das minhas férias poderão ser usadas na divulgação de concursos futuros.<input type="checkbox" name="agreement-input" id="agreement-input"></label>
+         <br>
+         <button class="buttons" type="submit" id="submit-button">Enviar</button>
+         <button class="buttons" type="reset" id="reset-button">Limpar</button>
+      </form>
+   </main>
+<script src="script.js"></script>
+</body>
+</html>

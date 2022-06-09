@@ -1,3 +1,5 @@
+// Parte 1
+
 const checkTwoInputs = (value1, value2) => {
   if (value1.length === 0 || value2.length === 0) {
     throw new Error(`Digite um número em cada campo!`);

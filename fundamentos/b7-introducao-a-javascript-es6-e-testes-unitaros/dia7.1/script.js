@@ -70,3 +70,30 @@
 //   clickCounter += 1;
 //   counter.innerText = clickCounter;
 // })
+
+// Exercício 4
+
+// const oldString = `Tryber x aqui!
+// Tudo bem?`;
+// const mySkills = ['Java', 'CSS', 'HTML', 'ES6', 'Terminal'];
+
+// const replaceLetter = (string) => oldString.replace(`x`, string);
+
+// const concatenarString = (string1) => {
+//   const newArray = mySkills.sort();
+//   const newString = `${string1}, 
+//   Minhas cinco principais habilidades são: 
+//   ${newArray[0]}, 
+//   ${newArray[1]},  
+//   ${newArray[2]},  
+//   ${newArray[3]},  
+//   ${newArray[4]}
+  
+//   #goTrybe`;
+//   return newString;
+// }
+
+// console.log(concatenarString(replaceLetter(`Everton`)));
+
+
+

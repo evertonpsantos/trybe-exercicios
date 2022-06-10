@@ -60,7 +60,6 @@ const orderModifier = (order) => {
   const pizzaMarguerita = keys[0];
   const pizzaPepperoni = keys[1];
   const cokeZero = order['order']['drinks']['coke']['type'];
-  // const total = ${values[0]['price']} + ${values[1]['price']} + ${cokeValue[1]}
   const finalMessage = `Olá ${client}, o total do seu pedido de ${pizzaMarguerita}, ${pizzaPepperoni} e ${cokeZero} é R$${margueritaPrice + pepperoniPrice + cokePrice}`;
   return finalMessage;
 

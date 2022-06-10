@@ -45,7 +45,7 @@ const customerInfo = (order) => {
   return finalMessage;
 }
 
-// console.log(customerInfo(order));
+console.log(customerInfo(order));
 
 const orderModifier = (order) => {
   order['name'] = 'Luiz Silva';

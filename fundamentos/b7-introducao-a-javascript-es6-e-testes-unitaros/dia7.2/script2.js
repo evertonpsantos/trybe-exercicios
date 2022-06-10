@@ -42,15 +42,28 @@ const customerInfo = (order) => {
   const houseNumber = order['address']['number'];
   const apartmentNumber = order['address']['apartment'];
   const finalMessage = `Olá ${deliveryPerson}, entrega para: ${client}, Telefone: ${phoneNumber}, ${street}, Número ${houseNumber}, AP:${apartmentNumber}`;
-
   return finalMessage;
 }
 
-console.log(customerInfo(order));
+// console.log(customerInfo(order));
 
 const orderModifier = (order) => {
-  // Adicione abaixo as informações necessárias.
+  order['name'] = 'Luiz Silva';
+  order['order']['drinks']['coke']['price'] = 5;
+  const keys = Object.keys(order['order']['pizza']);
+  const values = Object.values(order['order']['pizza']);
+  const margueritaPrice = values[0]['price'];
+  const pepperoniPrice = values[1]['price'];
+  const cokeValue = Object.values(order['order']['drinks']['coke'])
+  const cokePrice = cokeValue[1];
+  const client = order['name'];
+  const pizzaMarguerita = keys[0];
+  const pizzaPepperoni = keys[1];
+  const cokeZero = order['order']['drinks']['coke']['type'];
+  // const total = ${values[0]['price']} + ${values[1]['price']} + ${cokeValue[1]}
+  const finalMessage = `Olá ${client}, o total do seu pedido de ${pizzaMarguerita}, ${pizzaPepperoni} e ${cokeZero} é R$${margueritaPrice + pepperoniPrice + cokePrice}`;
+  return finalMessage;
 
 }
 
-orderModifier(order);
+console.log(orderModifier(order));

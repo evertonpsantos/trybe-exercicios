@@ -45,8 +45,6 @@ function encode(stringParam) {
   return aux.join('');
 }
 
-console.log(encode('sequoia'));
-
 function decode(stringParam2) {
   let splitWord = stringParam2.split('');
   let aux = [];
@@ -84,4 +82,19 @@ function techList(list, nameEntry) {
   return aux;
 }
 
-module.exports = {sum, myRemove, myFizzBuzz, encode, decode, techList};
+function hydrate(frase) {
+  let numberOnString = frase.match(/\d+/g);
+  let sum = 0;
+  for (let i = 0; i < numberOnString.length; i += 1) {
+    let aux = parseInt(numberOnString[i]);
+    sum += aux;
+  }
+  if (sum === 1) {
+    return `${sum} copo de água`;
+  }
+  return `${sum} copos de água`;
+}
+
+console.log(hydrate(`2 cerveja`))
+
+module.exports = {sum, myRemove, myFizzBuzz, encode, decode, techList, hydrate};

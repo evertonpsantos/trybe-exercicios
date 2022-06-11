@@ -68,4 +68,20 @@ function decode(stringParam2) {
   return aux.join('');
 }
 
-module.exports = {sum, myRemove, myFizzBuzz, encode, decode};
+function techList(list, nameEntry) {
+  let aux = [];
+  let aux2 = list.sort();
+  if (list.length < 1) {
+    return 'Vazio!';
+  }
+
+  for (let i = 0; i < aux2.length; i += 1) {
+    aux.push({
+      tech: aux2[i],
+      name: nameEntry
+    });
+  }
+  return aux;
+}
+
+module.exports = {sum, myRemove, myFizzBuzz, encode, decode, techList};

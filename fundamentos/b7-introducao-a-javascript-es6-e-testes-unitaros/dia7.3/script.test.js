@@ -1,4 +1,4 @@
-const {sum, myRemove, myFizzBuzz} = require('./script')
+const {sum, myRemove, myFizzBuzz, encode, decode} = require('./script')
 
 describe('The sum function', () => {
   it('returns 9 when sum(4, 5)', () => {
@@ -40,4 +40,34 @@ describe('The myFizzBuzz function', () => {
   it('returns false when myFizzBuzz("cinco")', () => {
     expect(myFizzBuzz("cinco")).toEqual(false);
   })
-})
+});
+
+describe('The encode function', () => {
+  it('is a function', () => {
+    expect(typeof encode).toEqual('function');
+  })
+  it('returns 12345 when encode("aeiou")', () => {
+    expect(encode("aeiou")).toEqual('12345')
+  })
+  it('returns A5rél34 when encode("Aurélio")', () => {
+    expect(encode("Aurélio")).toEqual('A5rél34');
+  })
+  it('returns string of same length as parameter', () => {
+    expect(encode('4v4').length).toEqual(3);
+  })
+});
+
+describe('The decode function', () => {
+  it('is a function', () => {
+    expect(typeof decode).toEqual('function');
+  })
+  it('returns aeiou when decode("12345")', () => {
+    expect(decode('12345')).toEqual('aeiou');
+  })
+  it('returns sequoia when decode("s2q5431")', () => {
+    expect(decode('s2q5431')).toEqual('sequoia');
+  })
+  it('returns string of same length as parameter', () => {
+    expect(encode('ovo').length).toEqual(3);
+  })
+});

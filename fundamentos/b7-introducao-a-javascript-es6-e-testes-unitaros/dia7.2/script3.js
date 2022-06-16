@@ -28,3 +28,6 @@ const listKeys = (obj) => Object.keys(obj);
 
 // Exercício 3
 const objLength = (obj) => Object.keys(obj).length;
+
+// Exercício 4
+const objValues = (obj) => Object.values(obj);

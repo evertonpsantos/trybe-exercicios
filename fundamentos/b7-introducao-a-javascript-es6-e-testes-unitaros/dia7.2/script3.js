@@ -47,3 +47,15 @@ const studentNumber = (obj) => {
 
 // Exercício 7
 const getValueByNumber = (obj, position) => Object.values(obj)[position];
+
+// Exercício 8
+const verifyIfMatches = (obj, key, value) => {
+  const aux = Object.entries(obj);
+  for (let i in aux) {
+    if (aux[i][0] === key && aux[i][1] === value) {
+      return true;
+    }
+  }
+  return false;
+};
+console.log(verifyIfMatches(lesson3, 'turno', 'noite'));

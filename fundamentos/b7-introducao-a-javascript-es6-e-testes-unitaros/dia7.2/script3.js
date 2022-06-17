@@ -58,4 +58,3 @@ const verifyIfMatches = (obj, key, value) => {
   }
   return false;
 };
-console.log(verifyIfMatches(lesson3, 'turno', 'noite'));

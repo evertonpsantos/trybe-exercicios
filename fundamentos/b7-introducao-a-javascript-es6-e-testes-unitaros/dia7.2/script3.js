@@ -33,15 +33,17 @@ const objLength = (obj) => Object.keys(obj).length;
 const objValues = (obj) => Object.values(obj);
 
 // Exercício 5
-const allLessons = Object.assign({}, {lesson1, lesson2, lesson3});
+const allLessons = Object.assign({}, { lesson1, lesson2, lesson3 });
 
 // Exercício 6
 const studentNumber = (obj) => {
   let studentCount = 0;
   const lessons = Object.keys(obj);
   for (let i in lessons) {
-    studentCount += obj[lessons[i]]['numeroEstudantes'];
+    studentCount += obj[lessons[i]]["numeroEstudantes"];
   }
   return studentCount;
 };
-console.log(studentNumber(allLessons));
+
+// Exercício 7
+const getValueByNumber = (obj, position) => Object.values(obj)[position];

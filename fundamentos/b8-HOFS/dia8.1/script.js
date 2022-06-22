@@ -1,6 +1,6 @@
 // Exercício 1
 const newPerson = (nomeCompleto) => {
-  const emailGenerator = nomeCompleto.toLowerCase().split(" ").join("_")
+  const emailGenerator = nomeCompleto.toLowerCase().replace(" ", "_");
   const newPerson = { nomeCompleto, 
     email: `${emailGenerator}@trybe.com`
   };
@@ -15,3 +15,11 @@ const newEmployees = (callback) => {
   }
   return employees;
 };
+
+// Exercício 2
+const conferirNumero = (numApostado, numSorteado) => (numApostado === numSorteado) ? `Parabéns, você ganhou!` : `Tente novamente.`;
+
+const resultadoSorteio = (numeroApostado) => {
+  const numeroSorteado = Math.floor((Math.random() * 6));
+  return conferirNumero(numeroApostado, numeroSorteado);
+}

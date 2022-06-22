@@ -20,6 +20,28 @@ const newEmployees = (callback) => {
 const conferirNumero = (numApostado, numSorteado) => (numApostado === numSorteado) ? `Parabéns, você ganhou!` : `Tente novamente.`;
 
 const resultadoSorteio = (numeroApostado) => {
-  const numeroSorteado = Math.floor((Math.random() * 6));
+  const numeroSorteado = Math.floor((Math.random() * 5) + 1);
+  console.log(numeroSorteado);
   return conferirNumero(numeroApostado, numeroSorteado);
+};
+
+// Exercício 3
+const RIGHT_ANSWERS = ['A', 'C', 'B', 'D', 'A', 'A', 'D', 'A', 'D', 'C'];
+const STUDENT_ANSWERS = ['A', 'N.A', 'B', 'D', 'A', 'C', 'N.A', 'A', 'D', 'B'];
+
+const contadorDeAcertos = (rightAnswers, studentAnswers) => {
+  let counter = 0;
+  for (let i in rightAnswers) {
+    if (studentAnswers[i] !== 'N.A') {
+    if (studentAnswers[i] === rightAnswers[i]) {counter += 1};
+    if (studentAnswers[i] !== rightAnswers[i]) {counter -= 0.5}; 
+    };  
+  }
+  return counter;
 }
+
+const checandoProvas = (gabarito, respostas, callback) => {
+  return callback(gabarito, respostas);
+};
+
+console.log(checandoProvas(RIGHT_ANSWERS, STUDENT_ANSWERS, contadorDeAcertos))

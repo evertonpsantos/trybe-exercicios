@@ -44,4 +44,44 @@ const checandoProvas = (gabarito, respostas, callback) => {
   return callback(gabarito, respostas);
 };
 
-console.log(checandoProvas(RIGHT_ANSWERS, STUDENT_ANSWERS, contadorDeAcertos))
+// Bonus Parte 1
+const mage = {
+  healthPoints: 130,
+  intelligence: 45,
+  mana: 125,
+  damage: undefined,
+};
+
+const warrior = {
+  healthPoints: 200,
+  strength: 30,
+  weaponDmg: 2,
+  damage: undefined,
+};
+
+const dragon = {
+  healthPoints: 350,
+  strength: 50,
+  damage: undefined,
+};
+
+const battleMembers = { mage, warrior, dragon };
+
+const dragonDamage = () => {
+  const dragonRandomDamage = dragon.damage = Math.floor(Math.random() * (dragon.strength) - (15) + 15);
+  return dragonRandomDamage;
+}
+
+const warriorDamage = () => {
+  const warriorDmg = warrior.damage = Math.floor(Math.random() * (warrior.strength * warrior.weaponDmg) - (warrior.strength) + warrior.strength);
+  return warriorDmg;
+}
+
+const mageConsumption = () => {
+  if (mage.mana === 0) return `Não possui mana suficiente`;
+  const obj = {
+    damage: Math.floor(Math.random() * (mage.intelligence * 2) - (mage.intelligence) + mage.intelligence),
+    mana: 15 
+  }
+  return obj;
+}

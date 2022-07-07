@@ -1,0 +1,28 @@
+body {
+  background-color: #D5FBB5;
+  text-align: center;
+}
+
+h1 {
+  font-size: 50px;
+  color: darkolivegreen;
+}
+
+#coinContainer {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+
+li {
+  align-self: center;
+  border: 1px solid grey;
+  border-radius: 5px;
+  width: 300px;
+  padding: 10px;
+}
+
+li:hover {
+  box-shadow: 0 10px 10px;
+  font-size: 18px;
+}

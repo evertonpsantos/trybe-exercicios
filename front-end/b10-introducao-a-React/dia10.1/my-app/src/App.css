@@ -1,0 +1,41 @@
+body {
+  background-color: rgba(107, 60, 107, 0.5);
+}
+
+.App {
+  text-align: center;
+}
+
+.main {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.content-items {
+  border-style: outset;
+  border-width: 3px;
+  width: 500px;
+  margin-bottom: 10px;
+}
+
+.content-items:hover {
+  border-style: inset;
+  box-shadow: 0 0 15px gold;
+}
+
+#conteudo-0 {
+  background-color: rgb(19, 121, 204);
+}
+
+#conteudo-1 {
+  background-color: rgb(185, 126, 54);
+}
+
+#conteudo-2 {
+  background-color: rgb(105, 25, 25);
+}
+
+#conteudo-3 {
+  background-color: rgb(112, 51, 117);
+}

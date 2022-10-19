@@ -23,3 +23,8 @@ ORDER BY name DESC;
 --Exercício 5
 SELECT COUNT(*) FROM Fornecedores
 WHERE code LIKE '%F%';
+
+--Exercício 6
+SELECT * FROM Fornecimentos
+WHERE Preco BETWEEN 15 AND 40
+ORDER BY Preco;

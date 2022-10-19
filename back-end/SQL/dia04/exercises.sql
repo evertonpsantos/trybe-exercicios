@@ -35,3 +35,12 @@ WHERE movie_id = 11;
 
 DELETE FROM Movies
 WHERE title = 'WALL-E';
+
+--Exercício 7
+SELECT * FROM Movies WHERE director = 'Andrew Staton';
+
+DELETE FROM BoxOffice
+WHERE movie_id IN (2, 9);
+
+DELETE FROM Movies
+WHERE director = 'Andrew Staton';

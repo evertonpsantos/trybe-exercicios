@@ -14,3 +14,8 @@ ORDER BY Fornecedor;
 --Exercício 3
 SELECT peca, Preco, Fornecedor FROM Fornecimentos
 WHERE Fornecedor LIKE '%N%';
+
+--Exercício 4
+SELECT * FROM Fornecedores
+WHERE `name` LIKE '%LTDA'
+ORDER BY name DESC;

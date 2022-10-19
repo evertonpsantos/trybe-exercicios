@@ -10,3 +10,7 @@ WHERE `name` LIKE 'GR%';
 SELECT * FROM Fornecimentos
 WHERE peca = 2
 ORDER BY Fornecedor;
+
+--Exercício 3
+SELECT peca, Preco, Fornecedor FROM Fornecimentos
+WHERE Fornecedor LIKE '%N%';

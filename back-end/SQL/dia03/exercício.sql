@@ -19,3 +19,7 @@ WHERE Fornecedor LIKE '%N%';
 SELECT * FROM Fornecedores
 WHERE `name` LIKE '%LTDA'
 ORDER BY name DESC;
+
+--Exercício 5
+SELECT COUNT(*) FROM Fornecedores
+WHERE code LIKE '%F%';

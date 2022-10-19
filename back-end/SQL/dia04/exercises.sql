@@ -7,3 +7,8 @@ VALUES
 ('Procurando Nemo', 'John Lasseter', 2003, 107),
 ('Os Incriveis', 'Brad Bird', 2004, 116),
 ('WALL-E', 'Pete Docker', 2008, 104);
+
+--Exercício 2
+INSERT INTO Pixar.BoxOffice (movie_id, rating, domestic_sales, international_sales)
+VALUES (9, 6.8, 450000000, 370000000);
+

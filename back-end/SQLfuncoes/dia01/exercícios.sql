@@ -49,3 +49,8 @@ SELECT department_id, ROUND(AVG(salary), 2) as salary_average, COUNT(employee_id
 FROM hr.employees
 GROUP BY department_id
 HAVING total_employees > 10;
+
+-- 11. Escreva uma query que atualize a coluna PHONE_NUMBER, de modo que todos os telefones iniciados por 515 agora devem iniciar com 777.
+UPDATE hr.employees
+SET phone_number = REPLACE(phone_number, 515, 777)
+WHERE phone_number LIKE '515.%';

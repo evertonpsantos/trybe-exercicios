@@ -44,3 +44,8 @@ GROUP BY job_id
 HAVING job_id <> 'IT_PROG'
 ORDER BY total DESC;
 
+-- 10. Escreva um query que exiba média salarial e o número de funcionários de todos os departamentos com mais de dez funcionários. Dica: agrupe pelo DEPARTMENT_ID.
+SELECT department_id, ROUND(AVG(salary), 2) as salary_average, COUNT(employee_id) as total_employees
+FROM hr.employees
+GROUP BY department_id
+HAVING total_employees > 10;

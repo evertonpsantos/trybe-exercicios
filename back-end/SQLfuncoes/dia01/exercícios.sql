@@ -20,3 +20,8 @@ SELECT
     	ROUND(SUM(salary), 2) AS salary_sum,
 	ROUND(AVG(salary), 2) AS salary_average
 FROM hr.employees;
+
+-- 6. Escreva uma query que exiba a quantidade de pessoas que trabalham como pessoas programadoras (IT_PROG).
+SELECT job_id, COUNT(*) as total
+FROM hr.employees
+WHERE job_id = 'IT_PROG';

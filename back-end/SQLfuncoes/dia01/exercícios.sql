@@ -80,3 +80,7 @@ FROM hr.employees;
 SELECT last_name, hire_date
 FROM hr.employees
 WHERE hire_date LIKE '1987-07-%';
+
+-- 18: 🚀 Escreva uma query que exiba as seguintes informações de cada funcionário: nome, sobrenome, tempo que trabalha na empresa (em dias).
+SELECT first_name, last_name, DATEDIFF(CURRENT_DATE(), hire_date) as time_hired
+FROM hr.employees;

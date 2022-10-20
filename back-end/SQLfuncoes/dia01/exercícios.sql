@@ -75,3 +75,8 @@ FROM hr.employees;
 -- 16. Escreva uma query que exiba os nomes dos funcionários em letra maiúscula.
 SELECT CONCAT(UCASE(first_name), ' ', UCASE(last_name)) as employees
 FROM hr.employees;
+
+-- 17: Escreva uma query que exiba o sobrenome e a data de contratação de todos os funcionário contratados em julho de 1987.
+SELECT last_name, hire_date
+FROM hr.employees
+WHERE hire_date LIKE '1987-07-%';

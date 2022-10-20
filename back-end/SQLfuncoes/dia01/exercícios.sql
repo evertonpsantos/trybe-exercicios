@@ -25,3 +25,8 @@ FROM hr.employees;
 SELECT job_id, COUNT(*) as total
 FROM hr.employees
 WHERE job_id = 'IT_PROG';
+
+-- 7. Escreva uma query que exiba a quantidade de dinheiro necessária para efetuar o pagamento de cada profissão (JOB_ID).
+SELECT job_id, SUM(salary) as total
+FROM hr.employees
+GROUP BY job_id;

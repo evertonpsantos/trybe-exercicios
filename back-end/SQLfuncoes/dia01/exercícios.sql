@@ -71,3 +71,7 @@ FROM hr.employees;
 -- 15. Escreva uma query que exiba as seguintes informações de cada funcionário: id, primeiro nome e mês no qual foi contratado (exiba somente o mês).
 SELECT employee_id, first_name, MONTH(hire_date) as hire_month
 FROM hr.employees;
+
+-- 16. Escreva uma query que exiba os nomes dos funcionários em letra maiúscula.
+SELECT CONCAT(UCASE(first_name), ' ', UCASE(last_name)) as employees
+FROM hr.employees;

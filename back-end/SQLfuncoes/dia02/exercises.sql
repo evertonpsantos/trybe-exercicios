@@ -46,3 +46,14 @@ FROM
         RIGHT JOIN
     pixar.movies AS m ON t.id = m.theater_id
 ORDER BY t.name;
+
+-- Exercício 6 (bônus)
+SELECT 
+    *
+FROM
+    pixar.movies AS m
+        INNER JOIN
+    pixar.box_office BO ON BO.movie_id = m.id
+WHERE
+    m.theater_id IS NOT NULL
+        AND BO.rating > 8;

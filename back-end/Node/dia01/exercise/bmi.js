@@ -6,10 +6,12 @@ const calculateBMI = (weight, heightInCm) => {
 };
 
 const main = () => {
-  const weight = readline.question("What's your weight (in kg)? \n")
-  const height = readline.question("What's your height (in cm)? \n")
+  const weight = readline.questionFloat("What's your weight (in kg)? \n")
+  const height = readline.questionInt("What's your height (in cm)? \n")
   const bmi = calculateBMI(weight, height);
   console.log(`Your BMI is ${bmi}`);
 };
 
 main();
+
+//Adiciona questionFloat

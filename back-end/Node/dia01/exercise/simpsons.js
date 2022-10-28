@@ -1,4 +1,5 @@
 const fs = require('fs').promises;
+const readline = require('readline-sync');
 
 const readChars = async () => {
   const chars = await fs.readFile('./simpsons.json', 'utf-8');
@@ -8,4 +9,26 @@ const readChars = async () => {
   });
 }
 
-readChars();
+const findChar = async (id) => {
+  const chars = await fs.readFile('./simpsons.json', 'utf-8');
+  const promise = new Promise((resolve, reject) => {
+    const convertedChars = JSON.parse(chars); 
+    const foundChar = convertedChars.find((char) => char.id === id);
+    if (foundChar === undefined) reject(new Error('id não encontrado.'));
+    resolve(foundChar);
+  })
+  return promise;
+};
+
+const main = async () => {
+  const choosenId = readline.question('Type an id, please. \n');
+  let result;
+  try {
+    result = await findChar(choosenId);
+  } catch (error) {
+    return console.log(error.message);
+  }
+  console.log(result);
+};
+
+main();

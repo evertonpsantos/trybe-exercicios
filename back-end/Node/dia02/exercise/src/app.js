@@ -8,13 +8,19 @@ const moviesPath = path.resolve(__dirname, './movies.json');
 
 async function readJson () {
   try {
-    const movies = await fs.readFile(moviesPath);
-    const convertedMovies = JSON.parse(movies);
-    return convertedMovies;
+    const data = await fs.readFile(moviesPath);
+    return JSON.parse(data);
   } catch (error) {
-    return console.error('Erro na leitura do arquivo', error);
+    console.error(`Arquivo não pôde ser lido: ${error}`);
   }
 };
+
+app.get('/movies/:id', async (req, res) => {
+  const paramId = req.params.id;
+  const movies = await readJson();
+  const chosenMovie = movies.find((movie) => movie.id === Number(paramId));
+  res.status(200).json(chosenMovie);
+});
 
 async function main () {
   await readJson();

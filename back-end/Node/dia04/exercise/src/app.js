@@ -27,7 +27,19 @@ const validatePrice = (req, res, next) => {
   next();
 }
 
-app.post('/activities', validateName, validatePrice, (req, res) => {
+const validateDescriptionField = (req, res, next) => {
+  const { description } = req.body;
+  if (!description) {
+    return res.status(400).json({ message: 'O campo description é obrigatório.' });
+  }
+  const requiredProperties = ['createdAt', 'rating', 'difficulty'];
+  if (!requiredProperties.every((property) => property in description)) {
+    return res.status(400).json({ message: 'Os campos createdAt, rating e difficulty são obrigatórios.' });
+  }
+  next();
+};
+
+app.post('/activities', validateName, validatePrice, validateDescriptionField, (req, res) => {
   res.status(201).json({ message: 'Atividade cadastrada com sucesso' });
 });
 

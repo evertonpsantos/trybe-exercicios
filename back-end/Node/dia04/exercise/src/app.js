@@ -29,17 +29,31 @@ const validatePrice = (req, res, next) => {
 
 const validateDescriptionField = (req, res, next) => {
   const { description } = req.body;
+
   if (!description) {
     return res.status(400).json({ message: 'O campo description é obrigatório.' });
   }
+
   const requiredProperties = ['createdAt', 'rating', 'difficulty'];
+
   if (!requiredProperties.every((property) => property in description)) {
     return res.status(400).json({ message: 'Os campos createdAt, rating e difficulty são obrigatórios.' });
   }
   next();
 };
 
-app.post('/activities', validateName, validatePrice, validateDescriptionField, (req, res) => {
+const validateCreatedAt = (req, res, next) => {
+  const { createdAt } = req.body.description;
+
+  const validRegex = /^([0-2][0-9]|(3)[0-1])(\/)(((0)[0-9])|((1)[0-2]))(\/)\d{4}$/i;
+
+  if (!validRegex.test(createdAt)) {
+    return res.status(400).json({ "message": "O campo createdAt deve ter o formato \'dd/mm/aaaa\'" });
+  } 
+  next();
+};
+
+app.post('/activities', validateName, validatePrice, validateDescriptionField, validateCreatedAt, (req, res) => {
   res.status(201).json({ message: 'Atividade cadastrada com sucesso' });
 });
 

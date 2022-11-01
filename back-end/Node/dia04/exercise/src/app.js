@@ -27,7 +27,7 @@ const validatePrice = (req, res, next) => {
   next();
 }
 
-const validateDescriptionField = (req, res, next) => {
+const validateDescription = (req, res, next) => {
   const { description } = req.body;
 
   if (!description) {
@@ -53,7 +53,16 @@ const validateCreatedAt = (req, res, next) => {
   next();
 };
 
-app.post('/activities', validateName, validatePrice, validateDescriptionField, validateCreatedAt, (req, res) => {
+const validateRatingField = (req, res, next) => {
+  const { rating } = req.body.description;
+
+  if (rating <= 0 || rating >= 6 || typeof rating !== "number") {
+    return res.status(400).json({ "message": "Rating deve ser um número entre 1 e 5" });
+  }
+  next();
+};
+
+app.post('/activities', validateName, validatePrice, validateDescription, validateCreatedAt, validateRatingField, (req, res) => {
   res.status(201).json({ message: 'Atividade cadastrada com sucesso' });
 });
 

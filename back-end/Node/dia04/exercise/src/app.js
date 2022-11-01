@@ -62,7 +62,22 @@ const validateRatingField = (req, res, next) => {
   next();
 };
 
-app.post('/activities', validateName, validatePrice, validateDescription, validateCreatedAt, validateRatingField, (req, res) => {
+const validateDifficulty = (req, res, next) => {
+  const { difficulty } = req.body.description;
+  if (difficulty === "Fácil" || difficulty === "Médio" || difficulty === "Difícil") {
+    next();
+  };
+  return res.status(400).json({ "message": "O campo difficulty deve ser Fácil, Médio ou Difícil" });
+};
+
+app.post('/activities', 
+validateName, 
+validatePrice, 
+validateDescription, 
+validateCreatedAt, 
+validateRatingField, 
+validateDifficulty,
+(_req, res) => {
   res.status(201).json({ message: 'Atividade cadastrada com sucesso' });
 });
 

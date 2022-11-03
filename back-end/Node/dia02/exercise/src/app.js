@@ -6,14 +6,19 @@ const app = express();
 
 const moviesPath = path.resolve(__dirname, './movies.json');
 
-async function readJson () {
+async function readJson() {
   try {
     const data = await fs.readFile(moviesPath);
     return JSON.parse(data);
   } catch (error) {
     console.error(`Arquivo não pôde ser lido: ${error}`);
   }
-};
+}
+
+app.get('/movies', async (req, res) => {
+  const movies = await readJson();
+  res.status(200).json(movies);
+});
 
 app.get('/movies/:id', async (req, res) => {
   const paramId = req.params.id;
@@ -22,7 +27,7 @@ app.get('/movies/:id', async (req, res) => {
   res.status(200).json(chosenMovie);
 });
 
-async function main () {
+async function main() {
   await readJson();
 }
 

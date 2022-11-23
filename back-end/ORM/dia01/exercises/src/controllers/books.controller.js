@@ -5,6 +5,7 @@ const getAll = async (_req, res) => {
   return res.status(200).json(books);
 };
 
+
 module.exports = {
   getAll,
 }

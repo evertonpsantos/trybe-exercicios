@@ -6,7 +6,7 @@ const getAll = async () => {
 };
 
 const getById = async (bookId) => {
-  const foundBook = await Book.findByPk(id);
+  const foundBook = await Book.findByPk(bookId);
   return foundBook;
 };
 

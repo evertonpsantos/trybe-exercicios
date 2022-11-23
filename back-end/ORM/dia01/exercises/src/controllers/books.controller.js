@@ -8,7 +8,7 @@ const getAll = async (_req, res) => {
 const getById = async (req, res) => {
   const bookId = req.params.id;
   const foundBook = await BookService.getById(bookId);
-  if (foundBook === undefined) return res.status(404).json({ message: "Book Not Found"});
+  if (foundBook === undefined || foundBook === null) return res.status(404).json({ message: "Book Not Found"});
   return res.status(200).json(foundBook);
 };
 

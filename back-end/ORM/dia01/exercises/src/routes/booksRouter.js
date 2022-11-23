@@ -9,5 +9,7 @@ booksRouter.get('/:id', booksController.getById);
 
 booksRouter.post('/', booksController.createBook);
 
+booksRouter.put('/:id', booksController.updateBook);
+
 module.exports = booksRouter;
 

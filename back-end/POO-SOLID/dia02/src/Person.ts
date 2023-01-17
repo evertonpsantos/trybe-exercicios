@@ -33,8 +33,6 @@ class Person {
         if (age > 120) throw new Error('Only ages up to 120 years allowed');
     }
 }
-const tatiana = new Person('Tatiana', new Date('1920-06-07'));
-console.log(tatiana);
 
 
 export default Person;

@@ -1,4 +1,4 @@
-class Subject {
+export default class Subject {
     constructor(private _name: string) {}
 
     public get name() { return this._name }

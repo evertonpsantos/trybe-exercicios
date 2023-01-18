@@ -34,9 +34,4 @@ class Person {
     }
 }
 
-const everton = new Person('Ev', new Date('1995-07-02'));
-console.log(everton);
-
-
-
 export default Person;

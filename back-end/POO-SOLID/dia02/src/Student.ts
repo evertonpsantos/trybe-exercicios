@@ -1,58 +1,66 @@
-class Student {
-    private _examNotes: number[] = [];
-    private _workNotes: number[] = [];
+import Person from "./Person";
 
-    constructor(private _name: string, private _registration: string) {}
+class Student extends Person {
+    private _examsGrades: number[] = [];
+    private _assignmentsGrades: number[] = [];
+    private _enrollment: string = '';
 
-    public get name() {
-        return this._name;
+    constructor(name: string, birthDate: Date) {
+        super(name, birthDate);
+        this._enrollment = Student.generateEnrollment();
     }
 
-    public get registration() {
-        return this._registration;
+    public get name() { return super.name }
+
+    public get enrollment() { return this._enrollment }
+
+    public get examsGrades() { return this._examsGrades }
+
+    public get assignmentsGrades() { return this._assignmentsGrades }
+
+    public set name(name: string) { super.name = name }
+
+    public set enrollment(registration: string) {
+        if (registration.length > 16) throw new Error('Enrollment must contain 16 characters');
+        this._enrollment = registration 
     }
 
-    public get examNotes() {
-        return this._examNotes;
-    }
-
-    public get workNotes() {
-        return this._workNotes;
-    }
-
-    public set name(name: string) {
-        this._name = name;
-    }
-
-    public set registration(registration: string) {
-        this._registration = registration;
-    }
-
-    public set newExamNotes (newNotes: number[]) {
-        if (newNotes.length !== 4) {
-            throw new Error('Student must have 4 test notes');
+    public set examsGrades (newNotes: number[]) {
+        if (newNotes.length > 4) {
+            throw new Error('Student can have up to 4 test notes');
         }
 
-        this._examNotes = newNotes;
+        this._examsGrades = newNotes;
     }
 
-    public set newWorkNotes (newNotes: number[]) {
-        if (newNotes.length !== 2) {
-            throw new Error('Student must have 2 work notes');
+    public set assignmentsGrades (newNotes: number[]) {
+        if (newNotes.length > 2) {
+            throw new Error('Student can have up to 2 test notes');
         }
 
-        this._workNotes = newNotes;
+        this._assignmentsGrades = newNotes;
     }
 
     sumNotes() {
-        const examNotes = this._examNotes.reduce((acc, curr) => acc + curr);
-        const workNotes = this._workNotes.reduce((acc, curr) => acc + curr);
+        const examNotes = this._examsGrades.reduce((acc, curr) => acc + curr);
+        const workNotes = this._assignmentsGrades.reduce((acc, curr) => acc + curr);
         return examNotes + workNotes;
     }
 
     getAverage() {
         const notes = this.sumNotes();
-        const notesQuantity = this._examNotes.length + this._workNotes.length;
+        const notesQuantity = this._examsGrades.length + this._assignmentsGrades.length;
         return Math.round(notes / notesQuantity);
     }
+
+    static generateEnrollment() {
+        let enrollmentId: string = '';
+        const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXZabcdefghijklmnopqrstuvwxz1234567890'
+        for (let i = 0; i < 17; i+= 1) {
+            enrollmentId += alphabet[Math.floor(Math.random() * alphabet.length)]
+        }
+        return enrollmentId;
+    }
 }
+
+export default Student;

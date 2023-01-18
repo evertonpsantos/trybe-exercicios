@@ -22,17 +22,21 @@ class Person {
     }
 
     private validateName(name: string) { 
-        if (name.length < 3) return 'Name must have at least 3 characters';
+        if (name.length < 3) throw new Error('Name must have at least 3 characters');
     }
 
     private validateBirthdate(birthdate: Date) {
-        const currentDate = new Date().getTime();
-        if (birthdate.getTime() > currentDate) throw new Error('Future date not allowed');
+        const currentDate = new Date();
+        if (birthdate.getTime() > currentDate.getTime()) throw new Error('Future date not allowed');
 
-        const age = new Date().getFullYear() - birthdate.getFullYear();
+        const age = currentDate.getFullYear() - birthdate.getFullYear();
         if (age > 120) throw new Error('Only ages up to 120 years allowed');
     }
 }
+
+const everton = new Person('Ev', new Date('1995-07-02'));
+console.log(everton);
+
 
 
 export default Person;

@@ -31,8 +31,11 @@ use('cinema');
 // db.movies.find({ $or: [{ category: { $all: ["sci-fi"]}}, { ratings: { $elemMatch: { $gt: 199 } }}]}, { _id: 0, title: 1, ratings: 1, category: 1 });
 
 // Exercício 11: Retorne os filmes em que o ratings possua tamanho 4 e que seja da category "adventure" ou "family", mas que não tenha o imdbRating menor que 7.
-db.movies.find({ $and: [
-  {ratings: { $size: 4}}, 
-  {category: { $in: ["adventure", "family"]}}, 
-  {imdbRating: { $gte: 7 }}
-  ]});
+// db.movies.find({ $and: [
+//   {ratings: { $size: 4}}, 
+//   {category: { $in: ["adventure", "family"]}}, 
+//   {imdbRating: { $gte: 7 }}
+//   ]});
+
+// Exercício 12: Utilizando o operador $regex, retorne todos os filmes em que a descrição comece com a palavra "The".
+db.movies.find({ description: { $regex: /^The/ }});

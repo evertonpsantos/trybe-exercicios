@@ -31,4 +31,7 @@ use('class');
 // db.superheroes.countDocuments({ "aspects.hairColor": { $in: ["black", "no hair"]}});
 
 // Exercício 11: Retorne o total de super-heróis que não tenham cabelos pretos ("black") ou não sejam carecas.
-db.superheroes.countDocuments({ "aspects.hairColor": { $nin: ["black", "no hair"]}});
+// db.superheroes.countDocuments({ "aspects.hairColor": { $nin: ["black", "no hair"]}});
+
+// Exercício 12: Utilizando o operador $not, retorne o total de super-heróis que não tenham mais de 1.80m de altura.
+db.superheroes.countDocuments({ "aspects.height": { $not: { $gt: 180 }}});

@@ -19,4 +19,7 @@ use('mongo-exercises');
 // db.bios.find().skip(5).limit(2);
 
 // Exercício 7: Retorne a quantidade de documentos da coleção books.
-db.books.countDocuments({});
+// db.books.countDocuments({});
+
+// Exercício 8: Conte quantos livros existem com o status = "PUBLISH".
+db.books.countDocuments({ status: "PUBLISH" });

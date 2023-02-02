@@ -19,4 +19,7 @@ use('class');
 // db.superheroes.countDocuments({ "aspects.height": { $gte: 200 }});
 
 // Exercício 7: Selecione todos os super-heróis que têm olhos verdes ("green").
-db.superheroes.find({ "aspects.eyeColor": "green"});
+// db.superheroes.find({ "aspects.eyeColor": "green"});
+
+// Exercício 8: Retorne o total de super-heróis com olhos azuis ("blue").
+db.superheroes.countDocuments({ "aspects.eyeColor": "blue"});

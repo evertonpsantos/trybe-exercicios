@@ -46,4 +46,7 @@ use('class');
 // db.superheroes.find({ $and: [{ "aspects.weight": { $gte: 80, $lte: 100}}, { race: { $in: ["Human", "Mutant"]} }, { publisher: { $ne: "DC Comics"}}]});
 
 // Exercício 16: Retorne o total de documentos que não contêm o campo race.
-db.superheroes.countDocuments({ race: { $exists: false }});
+// db.superheroes.countDocuments({ race: { $exists: false }});
+
+// Exercício 17: Retorne o total de documentos que contêm o campo hairColor.
+db.superheroes.countDocuments({ "aspects.hairColor": { $exists: true }});

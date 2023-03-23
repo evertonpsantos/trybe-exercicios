@@ -39,3 +39,20 @@ def check_bigger_name(name_list):
         if len(name) > len(bigger_name):
             bigger_name = name
     return bigger_name
+
+
+# Exercício 5: Considere que a cobertura da tinta
+# é de 1 litro para cada 3 metros quadrados
+# e que a tinta é vendida em latas de 18 litros, que custam R$ 80,00.
+# Crie uma função que retorne dois valores em uma tupla contendo
+# a quantidade de latas de tinta a serem compradas
+# e o preço total a partir do tamanho de uma parede (em m²).
+
+
+def calculate_paint_usage(wall_size):
+    can_price = 80
+    liters_per_area = wall_size / 3
+    cans_needed = liters_per_area // 18
+    if liters_per_area % 18:
+        cans_needed += 1
+    return cans_needed, cans_needed * can_price

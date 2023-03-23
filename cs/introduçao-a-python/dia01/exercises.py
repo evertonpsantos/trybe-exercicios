@@ -4,3 +4,13 @@ def biggest_number(number1, number2):
     if number1 > number2:
         return number1
     return number2
+
+# Calcule a média aritmética dos valores contidos em uma lista.
+
+
+def calculate_average(list):
+    list_length = len(list)
+    list_value_sim = 0
+    for value in list:
+        list_value_sim += value
+    return list_value_sim // list_length

@@ -5,7 +5,7 @@ def biggest_number(number1, number2):
         return number1
     return number2
 
-# Calcule a média aritmética dos valores contidos em uma lista.
+# Exercício 2: Calcule a média aritmética dos valores contidos em uma lista.
 
 
 def calculate_average(list):

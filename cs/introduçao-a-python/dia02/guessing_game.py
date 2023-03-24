@@ -1,6 +1,5 @@
 import random
-
-word_list = ["ABLUBLE", "MASSA", "CASA"]
+import json
 
 
 def get_word(word_list):
@@ -19,12 +18,15 @@ def get_user_guesses():
 
 
 if __name__ == "__main__":
+    with open("game_words.json") as file:
+        recovered = file.read()
+        word_list = json.loads(recovered)
     random_word, scrambled_word = get_word(word_list)
     print(scrambled_word)
 
     user_guesses = get_user_guesses()
 
     if user_guesses.count(random_word):
-        print(f"Parabéns, você acertou. A palavra era {random_word}")
+        print(f"Parabéns, você acertou! A palavra era {random_word}")
     else:
         print(f"Você não acertou. A palavra era {random_word}")

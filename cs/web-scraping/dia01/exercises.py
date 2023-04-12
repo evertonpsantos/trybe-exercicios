@@ -33,4 +33,5 @@ description = (
     selector.css("#product_description ~ p::text").get().removesuffix("...more")
 )
 image_url = selector.css("img::attr(src)").get()
-print(f"{title}, {price}, {description}, {image_url}")
+in_stock = selector.css(".product_main .availability::text").re_first(r'\d')
+print(f"{title}, {price}, {description}, {image_url}, {in_stock}")

@@ -1,4 +1,5 @@
 import requests
+
 # from parsel import Selector
 
 # Exercício 1
@@ -8,7 +9,15 @@ import requests
 
 # Exercício 2
 
-response = requests.get("https://api.github.com/users")
+# response = requests.get("https://api.github.com/users")
 
-for user in response.json():
-    print(user['login'], user['url'])
+# for user in response.json():
+#     print(user['login'], user['url'])
+
+# Exercício 3
+
+response = requests.get(
+    "https://www.scrapethissite.com/pages/advanced/?gotcha=headers", headers={
+      'Accept': 'text/html',
+      'User-Agent': 'Mozilla'})
+assert "bot detected" not in response.text
